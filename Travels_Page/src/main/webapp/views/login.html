@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iniciar Sesión</title>
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+            <div class="row">
+                    <nav class="navbar navbar-expand col-12 navbar-dark bg-dark"> <!--Nav1 Inicio-->
+                            <a class="logo navbar-brand mg-h0 h1 col-2" href="#">AGENCIA DE VIAJES</a> <!--Nombre de la Agencia-->
+                     </nav>
+             </div><!--Nav1 Final-->
+                    
+                    <div class="row">
+                    <nav class="navbar navbar-expand-md sticky-top col-12 navbar-dark bg-primary navAzul"> <!--Nav2 (Azul) inicio-->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <div class="collapse navbar-collapse" id="navbarsExample02">
+                            <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="../">Aerolineas</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="../">Contacto</a>
+                              </li>
+                            </ul>
+                            <form class="form-inline my-2 my-md-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Buscar Vuelo..." aria-label="Search">
+                                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button> <!--Boton contenido-->
+                            </form>
+                          </div>
+                    </nav>
+                </div><!--Nav2 (Azul) Final-->
+
+
+                <!-------------------------Formulario Log In----------------->
+            <div class="contenedorFormulario">
+                <div class="formulario_div">
+                        <h2>Iniciar Sesión</h2>
+                            <input id="user_id"type="text" class="inputs" name="user" placeholder="Ingrese su Usuario">
+                            <br>
+                            <input id="password" type="password" name="pass" class="inputs" placeholder="Ingrese su contraseña">
+                            <br>
+                            <button onclick="login()" type="submit" id="boton_iniciar">Iniciar Sesión</button>
+                            <br>
+                            <a href="./register.html">¿No tiene cuenta? Crear una</a>
+                            <br>
+                            <a href="./forgot_password.html">¿Olvidó su contraseña?</a>
+                </div>
+            </div> 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

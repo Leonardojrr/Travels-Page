@@ -10,10 +10,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
-/**
- *
- * @author Hijos
- */
+
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class SuperMapper {
       private ObjectMapper objMap = new ObjectMapper();

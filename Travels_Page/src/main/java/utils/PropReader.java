@@ -24,6 +24,7 @@ public class PropReader {
             if (input != null) {
                 try {
                     input.close();
+                    System.out.println(input);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

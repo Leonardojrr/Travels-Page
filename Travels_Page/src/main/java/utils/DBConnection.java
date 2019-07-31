@@ -9,11 +9,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-/**
- *
- * @author Hijos
- */
+
 public class DBConnection {
     private Connection con;
     private PreparedStatement pstm,validate_pstm;
@@ -58,12 +54,23 @@ public class DBConnection {
     return this.valid_user;
   }
 
+  public ResultSet login(String query,Object param1,Object param2) throws SQLException {
+    try {
+      this.validate_pstm = this.con.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+      
+      this.validate_pstm.setObject(1, param1);
+      this.validate_pstm.setObject(2, param2);
+      
+      this.rs = this.validate_pstm.executeQuery();
+    } catch (SQLException e) {
+    }
+    return this.rs;
+  }
     
   //Sentencias de modificaciones a la DB
   public void update(String query, Object... values) {
     try {
       this.pstm = this.con.prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-
       for (int i = 0; i < values.length; i++) {
         this.pstm.setObject(i + 1, values[i]);
       }
