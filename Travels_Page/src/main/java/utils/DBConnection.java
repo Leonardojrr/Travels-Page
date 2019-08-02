@@ -25,6 +25,16 @@ public class DBConnection {
                     e.printStackTrace();
 		}
 	}
+        
+    public ResultSet execute(String query) {
+    try {
+      this.pstm = this.con.prepareStatement(query);
+      this.rs = this.pstm.executeQuery();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return this.rs;
+  }
 	
   //Select simples para comprobaciones
   public ResultSet execute(String query, Object... values) {

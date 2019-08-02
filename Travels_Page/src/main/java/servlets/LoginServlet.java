@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
         db = new DBConnection();
         mapper = new SuperMapper();
         propr = PropReader.getInstance();
+        
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
         
